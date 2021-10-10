@@ -10,7 +10,6 @@
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><%= campground.location %></li>
                 <li class="list-group-item">Rp.<%= campground.price %>,00/malam</li>
-                <li class="list-group-item">A third item</li>
             </ul>
             <div class="card-body">
                 <a class="card-link btn btn-info" href="/campgrounds/<%= campground._id %>/edit" >Edit</a>
@@ -43,7 +42,7 @@
                         Rating : <%= review.rating %>
                     </h5>
                     <p class="card-text">
-                        Review : Rating : <%= review.body %>
+                        Review : <%= review.body %>
                     </p>
                     <form action="/campgrounds/<%=campground._id%>/reviews/<%=review._id%>?_method=DELETE" method="POST">
                         <button class="btn btn-small btn-danger">Delete</button>
